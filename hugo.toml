@@ -2,3 +2,7 @@ baseURL = 'https://northaugustabarbell.com/'
 languageCode = 'en-us'
 title = 'North Augusta Barbell'
 theme = 'nab-dark'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
