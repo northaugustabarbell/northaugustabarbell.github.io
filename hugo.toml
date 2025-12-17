@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'North Augusta Barbell'
 theme = 'nab-dark'
 
+[params]
+subtitle = 'Home of Olympic Weightlifting in the CSRA'
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
