@@ -1,17 +1,106 @@
 {{ define "main" }}
 
-<div class="main-container">
-  <div class="page-description">
-    {{ .Content }}
-  </div>
+<style>
+  /* Layout for the split view */
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split the container evenly */
+    gap: 2rem;
+    align-items: start; /* Aligns content to the top so grid height doesn't move text */
+    margin-top: 2rem;
+  }
 
-  <div class="services-grid">
-    {{ range site.RegularPages }}
-      <article class="service-card">
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-        <p>{{ .Summary }}</p>
-      </article>
-    {{ end }}
+  /* Left side: Text Description */
+  .hero-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-family: 'Montserrat-Regular', sans-serif;
+  }
+  
+  .hero-text p {
+    margin-top: 0; /* Remove default margin to align with top of grid */
+  }
+
+  /* Right side: 3x3 Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr; 
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px; 
+    justify-self: end; /* Aligns the grid to the right edge of its column */
+  }
+
+  .service-card {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg, #121212);
+    border: 1px solid var(--border-color, #333);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: scale(1.02);
+    border-color: var(--text-color, #fff);
+    background-color: #1a1a1a;
+  }
+
+  .service-card h2 {
+    margin: 0;
+    text-align: center;
+    color: var(--text-color, #fff);
+    font-family: 'halyard-micro-bold', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 768px) {
+    .hero-split {
+      grid-template-columns: 1fr; /* Stack vertically on mobile */
+      gap: 2rem;
+    }
+    .hero-text {
+      text-align: center;
+    }
+    .services-grid {
+      justify-self: center;
+    }
+  }
+</style>
+
+<div class="navbar-bottom">
+      <h2 class="navbar-subtitle">{{ site.Params.Subtitle }}</h2>
+</div>
+
+<div class="main-container">      
+  <div class="hero-split">
+    <!-- Left: Text Description -->
+    <div class="hero-text">
+      <p>North Augusta Barbell is the leading Olympic Weightlifting facility in the CSRA and is operating in conjunction with Crossfit North Augusta. The only one of its kind in the area, NAB is fully equipped with high quality competition kilogram bumper plates and barbells. The facility offers personal training, group training, and flexible open gym hours and is open to all athletes interested in Olympic Weightlifting.</p>
+    </div>
+
+    <!-- Right: 3x3 Grid -->
+    <div class="services-grid">
+      {{ range first 9 site.RegularPages }}
+        <a href="{{ .RelPermalink }}" class="service-card">
+          <h2>{{ .LinkTitle }}</h2>
+        </a>
+      {{ end }}
+      
+      {{/* Fill empty spots if fewer than 9 pages to maintain 3x3 shape */}}
+      {{ $count := len (first 9 site.RegularPages) }}
+      {{ if lt $count 9 }}
+        {{ range seq (sub 9 $count) }}
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
 </div>
 {{ end }}

@@ -29,10 +29,23 @@
     font-family: 'Montserrat-Regular', system-ui, -apple-system, sans-serif;
   }
 
+  h1 {
+    font-family: 'halyard-micro-bold', sans-serif;
+  }
+
+  .main-hero {
+    width: 100%;
+  }
+
+  .hero-title {
+    text-align: center;
+    width: 100%;
+  }
+
   .navbar {
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
-    padding: 1.5rem 2rem;
+    padding: 0rem 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -69,7 +82,7 @@
   .navbar-subtitle {
     font-family: 'halyard-micro-bold', sans-serif;
     font-size: 2rem;
-    color: var(--text-muted);
+    color: var(--text-color);
     margin: 0;
     font-weight: normal;
     text-transform: uppercase;
@@ -97,9 +110,11 @@
   }
 
   .main-container {
+    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    border: #ffffff;
   }
 
   .page-description {

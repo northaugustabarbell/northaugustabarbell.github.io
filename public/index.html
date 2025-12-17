@@ -31,9 +31,6 @@
     </li>
       </ul>
     </div>
-    <div class="navbar-bottom">
-      <h2 class="navbar-subtitle">Home of Olympic Weightlifting in the CSRA</h2>
-    </div>
   </nav>
 
 
@@ -41,33 +38,125 @@
   <main>
     
 
-<div class="main-container">
-  <div class="page-description">
-    <p>Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.</p>
+<style>
+   
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 2rem;
+    align-items: start;  
+    margin-top: 2rem;
+  }
 
-  </div>
+   
+  .hero-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-family: 'Montserrat-Regular', sans-serif;
+  }
+  
+  .hero-text p {
+    margin-top: 0;  
+  }
 
-  <div class="services-grid">
+   
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr; 
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px; 
+    justify-self: end;  
+  }
+
+  .service-card {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg, #121212);
+    border: 1px solid var(--border-color, #333);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: scale(1.02);
+    border-color: var(--text-color, #fff);
+    background-color: #1a1a1a;
+  }
+
+  .service-card h2 {
+    margin: 0;
+    text-align: center;
+    color: var(--text-color, #fff);
+    font-family: 'halyard-micro-bold', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 768px) {
+    .hero-split {
+      grid-template-columns: 1fr;  
+      gap: 2rem;
+    }
+    .hero-text {
+      text-align: center;
+    }
+    .services-grid {
+      justify-self: center;
+    }
+  }
+</style>
+
+<div class="navbar-bottom">
+      <h2 class="navbar-subtitle">Home of Olympic Weightlifting in the CSRA</h2>
+</div>
+
+<div class="main-container">      
+  <div class="hero-split">
     
-      <article class="service-card">
-        <h2><a href="/posts/post-3/">Post 3</a></h2>
-        <p><p>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.</p></p>
-      </article>
+    <div class="hero-text">
+      <p>North Augusta Barbell is the leading Olympic Weightlifting facility in the CSRA and is operating in conjunction with Crossfit North Augusta. The only one of its kind in the area, NAB is fully equipped with high quality competition kilogram bumper plates and barbells. The facility offers personal training, group training, and flexible open gym hours and is open to all athletes interested in Olympic Weightlifting.</p>
+    </div>
+
     
-      <article class="service-card">
-        <h2><a href="/posts/post-2/">Post 2</a></h2>
-        <p><p>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.</p>
-<p>Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.</p></p>
-      </article>
-    
-      <article class="service-card">
-        <h2><a href="/posts/post-1/">Post 1</a></h2>
-        <p><p>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.</p>
-<p>Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.</p></p>
-      </article>
-    
+    <div class="services-grid">
+      
+        <a href="/posts/post-3/" class="service-card">
+          <h2>Post 3</h2>
+        </a>
+      
+        <a href="/posts/post-2/" class="service-card">
+          <h2>Post 2</h2>
+        </a>
+      
+        <a href="/posts/post-1/" class="service-card">
+          <h2>Post 1</h2>
+        </a>
+      
+      
+      
+      
+      
+        
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        
+          <div class="service-card" style="opacity: 0.3; pointer-events: none"></div>
+        
+      
+    </div>
   </div>
 </div>
 
