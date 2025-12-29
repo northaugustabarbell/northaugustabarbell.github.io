@@ -1,16 +1,20 @@
 {{ define "main" }}
 
-<div class="home-container">
-  <div class="subtitle-container">
-    <h2 class="subtitle">{{ site.Params.Subtitle }}</h2>
-  </div>
+
+<div class="home-container">  
   <div class="home-left">
-    <img class="home-image" src="/images/olga-epic.png">
+    <h1 class="subtitle">{{ site.Params.Subtitle }}</h1>
   </div>
-  <div class="home-right">
-    Right lah al ag sadfjkh asdf asdkfh sadfh sadfjhasd 
-    asdfjlkhasdjhf 
-    asdadjkfh asdfkhjasdf 
+  <div class="home-right">    
+    <div class="services-container"> 
+      <p class="services-caption">Services</p>
+      <ul class="services">      
+        <li><div class="service-card card1"><h3>Individualized Olympic Weightlifting Programs</h3></div></li>
+        <li><div class="service-card card2"><h3>REMOTE COACHING AND PROGRAMMING</h3></div></li>
+        <li><div class="service-card card3"><h3>Video Analysis and Feedback</h3></div></li>
+        <li><div class="service-card card4"><h3>Personal <br> Training</h3></div></li>
+      </ul>
+    </div>
   </div>
 </div>
 

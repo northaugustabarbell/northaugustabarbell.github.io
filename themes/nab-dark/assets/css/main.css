@@ -43,6 +43,11 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-family: 'halyard-micro-bold', sans-serif;
+  text-transform: uppercase;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -51,7 +56,7 @@ h2 {
 
 /* Mobile first */
 .container > * {
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
   padding: 10px;
   grid-column: col-start / span 12;
 }

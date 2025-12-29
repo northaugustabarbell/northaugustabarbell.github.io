@@ -1,12 +1,13 @@
 .home-container > * {
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
   padding: 0px;
   grid-column: col-start / span 12;
 }
 
+/* Desktop  */
 @media (min-width: 768px) {
     .home-container {
-        display: grid;
+        display: flex;
         gap: 20px;
     }
     .subtitle-container {
@@ -19,30 +20,95 @@
         letter-spacing: 0.1em;
         margin: 0;
     } 
+
     .home-left {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/olga-epic.png");
+        border-radius: 15px;
+        /* Position and center the image to scale nicely on all screens */
+        background-repeat: no-repeat;
+        background-size:cover;
+
         grid-column: 1 / 7;
         grid-row-start: 2;
         margin: 0;
+        padding: 0;
+        width: 60%;
     }
+
     .home-right {
         grid-column: 7 / 13;
         grid-row-start: 2;
-        margin: 0;   
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        width: 40%;
+        align-items: center;
+        align-content: center;
     }    
 
-    /* Responsive image on the right of the homepage.*/
-    .home-image {
-        /* Centers the image in the container. */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    .services-container {   
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .services-caption {
+        font-family: 'halyard-micro-bold', sans-serif;
+        text-transform: uppercase;
+        font-size: 15pt;
+        padding: 0;
+        margin: 0;
+    }
+    ul.services {
+        list-style-type: none; /* Remove bullets */
+        padding: 10px; /* Remove padding */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 10px;     
+    }
 
-        /* Constrains the width and makes it responsive. */
-        width: 100%;
-        max-width: 80%;
-        height: auto;  
+    ul.services li {        
+        /* Card styling */
+        border-radius: 8px;               
+        text-align: center;
+        height: 290px;        
+    }
+
+    .service-card {              
+        display: flex;
+        align-items: center;        
+        text-align: center;        
+        
+         /* Set a specific height */
+        height: 100%;
+                
+        /* Position and center the image to scale nicely on all screens */
+        background-repeat: no-repeat;
+        background-size: cover;
 
         /* Rounds the corners of the image. */
-        border-radius: 5%;     
+        border-radius: 5%; 
+        
+        /* Card contents props.*/        
+        padding: 5px;
+        padding-top: 50%;
+        font-size: 0.9rem;
     }
+
+    .card1 {                      
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Joc.png");
+    }
+    .card2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Lana.png");
+    }
+    .card3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Lynn-Coaching.png");
+    }
+    .card4 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Morgan-Coaching.png");
+        padding-left: 25%;
+    }    
 }
