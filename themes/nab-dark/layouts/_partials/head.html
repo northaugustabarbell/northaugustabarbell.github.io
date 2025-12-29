@@ -1,5 +1,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<!-- CSS -->
 {{ partialCached "head/css.html" . }}
+
+{{ $cssName := "" }}
+{{ if .IsHome }}
+  {{ $cssName = "home" }}
+{{ else }}
+  {{ $cssName = .Section }}
+{{ end }}
+
+{{ $cssPath := printf "css/%s.css" $cssName }}
+
+{{ if (fileExists (printf "static/%s" $cssPath)) }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ $cssPath | relURL }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $cssPath | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{ end }}
+
+<!-- JS -->
 {{ partialCached "head/js.html" . }}

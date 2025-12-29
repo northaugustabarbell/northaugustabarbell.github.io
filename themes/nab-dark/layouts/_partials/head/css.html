@@ -1,3 +1,4 @@
+<!-- Global theme CSS -->
 {{- with resources.Get "css/main.css" }}
   {{- if hugo.IsDevelopment }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -7,3 +8,4 @@
     {{- end }}
   {{- end }}
 {{- end }}
+

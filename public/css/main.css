@@ -1,93 +1,77 @@
 /* Page-specific styles for the home page */
-  @font-face {
-    font-family: 'halyard-micro-bold';
-    /* Ensure the file is at static/fonts/halyard-micro-bold.otf */
-    src: url('/fonts/halyard-micro-bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-  }
+@font-face {
+  font-family: 'halyard-micro-bold';
+  /* Ensure the file is at static/fonts/halyard-micro-bold.otf */
+  src: url('/fonts/halyard-micro-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'Montserrat-Regular';
-    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  :root {
-    --bg-color: #000000;
-    --card-bg: #121212;
-    --text-color: #ffffff;
-    --text-muted: #cbc9c9;
-    --border-color: #333333;
-  }
+:root {
+  --bg-color: #000000;
+  --card-bg: #121212;
+  --text-color: #ffffff;
+  --text-muted: #cbc9c9;
+  --border-color: #333333;
+}
 
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    font-family: 'Montserrat-Regular', system-ui, -apple-system, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  h1 {
-    font-family: 'halyard-micro-bold', sans-serif;
-  }
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Montserrat-Regular', system-ui, -apple-system, sans-serif;
+}
 
-  .main-hero {
-    width: 100%;
-  }
+h1 {
+  font-family: 'halyard-micro-bold', sans-serif;
+  text-transform: uppercase;
+}
 
-  .hero-title {
-    text-align: center;
-    width: 100%;
+h2 {
+  font-family: 'halyard-micro-bold', sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 20px;  
+}
+
+/* Mobile first */
+.container > * {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  grid-column: col-start / span 12;
+}
+
+@media (min-width: 768px) {
+  .header {
+    grid-area: "header";
   }
 
   .navbar {
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 0rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    /* Change to column to stack the top row and subtitle */
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem; 
-  }
-
-  /* New container for Title + Menu */
-  .navbar-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
 
-  /* New container for Subtitle */
-  .navbar-bottom {
-    text-align: center;
-    width: 100%;
-  }
-
   .navbar-title {
-    font-family: 'halyard-micro-bold', sans-serif;
-    font-size: 3rem; /* Adjusted size if needed */
-    font-weight: 800;
-    text-transform: uppercase;
+    font-size: 3rem;    
     letter-spacing: 0.05em;
-    color: var(--text-color);
-    text-decoration: none;
-  }
-
-  .navbar-subtitle {
-    font-family: 'halyard-micro-bold', sans-serif;
-    font-size: 2rem;
-    color: var(--text-color);
-    margin: 0;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+  } 
 
   .navbar-menu {
     display: flex;
@@ -108,56 +92,4 @@
   .navbar-menu li a:hover {
     color: var(--text-muted);
   }
-
-  .main-container {
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    border: #ffffff;
-  }
-
-  .page-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin-bottom: 4rem;
-    color: var(--text-muted);
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 2rem;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--text-color);
-  }
-
-  .service-card h2 {
-    font-family: 'halyard-micro-bold', sans-serif;
-    margin-top: 0;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .service-card a {
-    color: var(--text-color);
-    text-decoration: none;
-  }
-
-  .service-card p {
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin-bottom: 0;
-  }
+}
