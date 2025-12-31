@@ -4,111 +4,152 @@
   grid-column: col-start / span 12;
 }
 
+.home-container {
+    display: flex;
+    gap: 20px;
+} 
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/olga-epic.png");
+    border-radius: 15px;
+    /* Position and center the image to scale nicely on all screens */
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    grid-column: 1 / 7;
+    grid-row-start: 2;
+    margin: 0;
+}
+
+.join-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    height: 100%;  
+}
+
+.join-text {
+    text-align:justify;
+    padding: 5px;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.3);    
+}
+
+.home-right {
+    grid-column: 7 / 13;
+    grid-row-start: 2;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;        
+    align-items: center;
+    align-content: center;
+    width: 40%;
+}  
+
+.services-container {   
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.services-caption {
+    font-family: 'halyard-micro-bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 15pt;
+    padding: 0;
+    margin: 0;
+}
+ul.services {
+    list-style-type: none; /* Remove bullets */
+    padding: 10px; /* Remove padding */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;     
+}
+
+ul.services li {        
+    /* Card styling */
+    border-radius: 8px;               
+    text-align: center;
+    height: 290px;        
+}
+
+.service-card {              
+    display: flex;
+    align-items: center;        
+    text-align: center;        
+    
+        /* Set a specific height */
+    height: 100%;
+            
+    /* Position and center the image to scale nicely on all screens */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Rounds the corners of the image. */
+    border-radius: 5%; 
+    
+    /* Card contents props.*/        
+    padding: 5px;
+    padding-top: 50%;
+    font-size: 0.9rem;
+}
+
+.card1 {                      
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Joc.png");
+}
+.card2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Lana.png");
+}
+.card3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Lynn-Coaching.png");
+}
+.card4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Morgan-Coaching.png");
+    padding-left: 25%;
+}
+
 /* Desktop  */
 @media (min-width: 768px) {
     .home-container {
         display: flex;
         gap: 20px;
-    }
-    .subtitle-container {
-        grid-column: 2 / 11;
-        text-align: center;
-        background-color: black;        
-    } 
-    .subtitle {
-        font-size: 2rem;                
-        letter-spacing: 0.1em;
-        margin: 0;
-    } 
+    }    
 
-    .home-left {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/olga-epic.png");
-        border-radius: 15px;
-        /* Position and center the image to scale nicely on all screens */
-        background-repeat: no-repeat;
-        background-size:cover;
-
-        grid-column: 1 / 7;
-        grid-row-start: 2;
-        margin: 0;
-        padding: 0;
+    .home-left {        
         width: 60%;
     }
 
     .home-right {
-        grid-column: 7 / 13;
-        grid-row-start: 2;
-        margin: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-        display: flex;
         width: 40%;
-        align-items: center;
-        align-content: center;
+    }     
+    
+   .join-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;       
     }    
 
-    .services-container {   
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    .services-caption {
-        font-family: 'halyard-micro-bold', sans-serif;
-        text-transform: uppercase;
-        font-size: 15pt;
-        padding: 0;
-        margin: 0;
-    }
-    ul.services {
-        list-style-type: none; /* Remove bullets */
-        padding: 10px; /* Remove padding */
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        gap: 10px;     
+    .home-left {
+        width: 100%;
+        height: 400px;
     }
 
-    ul.services li {        
-        /* Card styling */
-        border-radius: 8px;               
-        text-align: center;
-        height: 290px;        
+    .home-right {
+        width: 100%;
     }
 
-    .service-card {              
-        display: flex;
-        align-items: center;        
-        text-align: center;        
-        
-         /* Set a specific height */
-        height: 100%;
-                
-        /* Position and center the image to scale nicely on all screens */
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        /* Rounds the corners of the image. */
-        border-radius: 5%; 
-        
-        /* Card contents props.*/        
-        padding: 5px;
-        padding-top: 50%;
-        font-size: 0.9rem;
+   .join-text {
+        font-size: 1rem;
     }
-
-    .card1 {                      
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Joc.png");
-    }
-    .card2 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Lana.png");
-    }
-    .card3 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Lynn-Coaching.png");
-    }
-    .card4 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Morgan-Coaching.png");
-        padding-left: 25%;
-    }    
 }

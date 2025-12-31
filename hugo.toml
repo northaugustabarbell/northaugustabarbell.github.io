@@ -5,6 +5,28 @@ theme = 'nab-dark'
 
 [params]
 subtitle = 'Home of Olympic Weightlifting in the CSRA'
+address = '1764 Knox Ave. North Augusta, SC'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Services'
+    pageRef = '/services'
+    weight = 20
+
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 30
+  
+  [[menus.main]]
+    name = 'Join Now'
+    url= 'https://docs.google.com/forms/d/e/1FAIpQLSdb1Y_M-5t3L9Cx78L3DGC0pFtluvfP_Ruodo2IWcmf6GIFqw/viewform?usp=pp_url'
+    weight = 40
 
 [caches]
   [caches.images]
