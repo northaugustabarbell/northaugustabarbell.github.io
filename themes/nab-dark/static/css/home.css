@@ -1,13 +1,8 @@
-.home-container > * {
+.home-container {
   /* border: 1px solid rgb(255, 255, 255); */
   padding: 0px;
   grid-column: col-start / span 12;
 }
-
-.home-container {
-    display: flex;
-    gap: 20px;
-} 
 
 .home-left {
     display: flex;
@@ -73,11 +68,23 @@ ul.services {
     gap: 10px;     
 }
 
-ul.services li {        
+ul.services li a {        
     /* Card styling */
     border-radius: 8px;               
     text-align: center;
-    height: 290px;        
+    height: 290px; 
+
+    /* Link styling. */
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul.services li a:hover {
+    color: var(--text-muted);    
+}
+
+ul.services li a:hover .service-card {
+    filter: brightness(0.7);
 }
 
 .service-card {              
@@ -99,6 +106,8 @@ ul.services li {
     padding: 5px;
     padding-top: 50%;
     font-size: 0.9rem;
+
+    transition: filter 0.3s ease;
 }
 
 .card1 {                      

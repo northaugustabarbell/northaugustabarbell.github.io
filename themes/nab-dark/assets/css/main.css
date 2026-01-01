@@ -32,6 +32,7 @@ body {
   color: var(--text-color);
   margin: 0;
   font-family: 'Montserrat-Regular', system-ui, -apple-system, sans-serif;
+  font-size: large;
 }
 
 h1 {
@@ -47,6 +48,11 @@ h2 {
 h3 {
   font-family: 'halyard-micro-bold', sans-serif;
   text-transform: uppercase;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
 }
 
 .nav-bar-link {
@@ -97,7 +103,7 @@ h3 {
   padding-bottom: 2.5px;
   padding-left: 5px;
   padding-right: 5px;
-  width: 95px;
+  width: 105px;
   text-align: center;
 }
 

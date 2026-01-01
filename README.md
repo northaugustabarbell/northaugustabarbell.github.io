@@ -1,5 +1,12 @@
 # The North Augusta Barbell Website
 
+## Site Design
+### Custom CSS
+**For page level CSS**, add a new file in `themes/nab-dark/static/css` making
+sure to name the CSS file the name of the page's directory. For example, the CSS
+file for the page `content/contact` is `contact.css`. Then this file will be
+automatically loaded when that page is visited.
+
 ## Hugo
 ### Directory Structure Cheat Sheet
 

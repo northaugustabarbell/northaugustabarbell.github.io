@@ -14,12 +14,12 @@ address = '1764 Knox Ave. North Augusta, SC'
     weight = 10
 
   [[menus.main]]
-    name = 'Services'
-    pageRef = '/services'
+    name = 'Staff'
+    pageRef = '/staff'
     weight = 20
 
   [[menus.main]]
-    name = 'About'
+    name = 'About Us'
     pageRef = '/about'
     weight = 30
   

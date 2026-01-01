@@ -15,7 +15,7 @@
 {{ $cssPath := printf "css/%s.css" $cssName }}
 
 {{ if (fileExists (printf "static/%s" $cssPath)) }}
-  {{- if hugo.IsDevelopment }}
+  {{- if hugo.IsDevelopment }}    
     <link rel="stylesheet" href="{{ $cssPath | relURL }}">
   {{- else }}
     {{- with . | minify | fingerprint }}
