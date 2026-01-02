@@ -1,11 +1,18 @@
 # The North Augusta Barbell Website
 
 ## Site Design
+### Staff
+**Staff image size**, must be 250px x 375px.
+
 ### Custom CSS
 **For page level CSS**, add a new file in `themes/nab-dark/static/css` making
 sure to name the CSS file the name of the page's directory. For example, the CSS
 file for the page `content/contact` is `contact.css`. Then this file will be
 automatically loaded when that page is visited.
+
+### Contact Form
+**Form Submission**, find the API url in `content/contact/_index.md`. Currently,
+we are using FormSpree to send emails as a result of the form submission.
 
 ## Hugo
 ### Directory Structure Cheat Sheet

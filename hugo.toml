@@ -6,6 +6,8 @@ theme = 'nab-dark'
 [params]
 subtitle = 'Home of Olympic Weightlifting in the CSRA'
 address = '1764 Knox Ave. North Augusta, SC'
+phone = '704-577-6049'
+email = 'NorthAugustaBarbell@gmail.com'
 
 [menus]
   [[menus.main]]

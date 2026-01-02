@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>North Augusta Barbell</title>
+    <title>Meet our Staff on North Augusta Barbell</title>
     <link>http://localhost:1313/staff/</link>
-    <description>Recent content on North Augusta Barbell</description>
+    <description>Recent content in Meet our Staff on North Augusta Barbell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/staff/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Olga Pisarskiy</title>
+      <link>http://localhost:1313/staff/olga/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/staff/olga/</guid>
+      <description>&lt;p&gt;Olga has been coaching in the CSRA since moving to the area from Charlotte, NC&#xA;in 2017.  Her experience ranges from coaching Olympic Weightlifting in a class&#xA;setting, group functional fitness, powerlifting, and a specialization in&#xA;one-on-one Olympic Weightlifting coaching.  Prior to opening a brick and mortar&#xA;space, Olga was providing remote and in-person coaching as well as&#xA;individualized programming. She has developed athletes and coached on all&#xA;competitive levels from local meets to USAW National level events alongside her&#xA;team; Butcher Barbell. Olga founded North Augusta Barbell after seeing a need&#xA;for a dedicated Olympic Weightlifting space in the CSRA. Her passion is to grow&#xA;the sport of Weightlifting and empower athletes to reach their full potential.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Harley Eades III</title>
+      <link>http://localhost:1313/staff/harley/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/staff/harley/</guid>
+      <description>&lt;p&gt;USAW L1 certified. blah blah blah blah blah blah balah blah blah blah blah 1 2 3&#xA;4 5 5&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

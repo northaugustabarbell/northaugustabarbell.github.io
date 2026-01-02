@@ -1,1 +1,3 @@
-Staff Coming Soon
+---
+title: 'Meet our Staff'
+---
