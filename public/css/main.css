@@ -144,7 +144,7 @@ a {
 
 .subtitle {            
   letter-spacing: 0.1em;
-  margin: 0;
+  margin: 0;  
 }
 
 .large-button {
@@ -163,6 +163,63 @@ a {
 
 .large-button:hover {
   color: var(--text-muted);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgb(255, 255, 255);
+  margin: 0;
+  padding-left: 2px;
+  padding-top: 5px;
+  gap: 25px;
+}
+
+.footer h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 13pt;
+}
+
+.footer .address {
+  flex: 1;
+}
+
+.footer .hours {
+  flex: 1;
+}
+
+.footer .address p {
+  padding: 0;
+  margin: 0;
+}
+
+.hours .hours-container {
+  width: 332px;
+}
+
+.hours .hours-row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.hours .hours-container .column-1 {
+  flex: 1;
+  text-align: right;
+}
+
+.hours .hours-container .column-2 {
+  flex: 1;
+  text-align: left;
+}
+
+.footer .contact {
+  flex: 1;
+}
+
+.footer .copyright {
+  flex: 1;
 }
 
 /* Large devices (laptops, desktops, etc) */
@@ -204,7 +261,7 @@ a {
   } 
 
   .subtitle {
-    font-size: 0.8rem;                
+    font-size: 11.5pt;      
   } 
 
   .navbar-container {
@@ -218,5 +275,9 @@ a {
     padding-top: 4px;
     padding-bottom: 4px;  
     width: 125px;
+  }
+
+  .footer {  
+    flex-direction: column;
   }
 }

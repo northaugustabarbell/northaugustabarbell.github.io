@@ -10,7 +10,7 @@
     align-items: center;
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/olga-epic.png");
-    border-radius: 15px;
+    
     /* Position and center the image to scale nicely on all screens */
     background-repeat: no-repeat;
     background-size:cover;
@@ -52,11 +52,12 @@
     text-align: center;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 .services-caption {
     font-family: 'halyard-micro-bold', sans-serif;
     text-transform: uppercase;
-    font-size: 15pt;
+    font-size: 25pt;
     padding: 0;
     margin: 0;
 }
@@ -65,14 +66,12 @@ ul.services {
     padding: 10px; /* Remove padding */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 10px;     
+    gap: 10px;    
 }
 
 ul.services li a {        
-    /* Card styling */
-    border-radius: 8px;               
+    /* Card styling */          
     text-align: center;
-    height: 290px; 
 
     /* Link styling. */
     text-decoration: none;
@@ -88,19 +87,15 @@ ul.services li a:hover .service-card {
 }
 
 .service-card {              
-    display: flex;
+    display: flex;    
+    height: 290px;
+    
     align-items: center;        
     text-align: center;        
-    
-        /* Set a specific height */
-    height: 100%;
             
     /* Position and center the image to scale nicely on all screens */
     background-repeat: no-repeat;
     background-size: cover;
-
-    /* Rounds the corners of the image. */
-    border-radius: 5%; 
     
     /* Card contents props.*/        
     padding: 5px;
@@ -121,7 +116,7 @@ ul.services li a:hover .service-card {
 }
 .card4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/home/Olga-Morgan-Coaching.png");
-    padding-left: 25%;
+    padding-left: 10%;    
 }
 
 /* Desktop  */

@@ -1,1 +1,14 @@
-<p></p>
+<div class="footer">
+    <div class="address">                
+        <h3>Location</h3>
+        <p>{{ site.Params.Address  }}</p>
+    </div>
+    <div class="hours">
+        <h3>Hours</h3>
+        <div class="hours-container">
+            {{ site.Params.Hours | safeHTML }}
+        </div>
+    </div>
+    <div class="contact">Contact Button</div>
+    <div class="copyright">© {{ site.Params.copyright }}</div>
+</div>

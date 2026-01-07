@@ -1,15 +1,13 @@
 ---
-title: "Individualized Programs"
-date: 2025-12-20T12:38:16-05:00
+title: "Video Analysis and Feedback"
 draft: true
+summary: "A brief description of this service for the card on the homepage."
 # weight controls which service is first in the grid.
-weight: 1
-card: "card1"
+weight: 4
+card: "card3"
 ---
-
 Some description. Details:
 
 - blah blah
 - blah blah 
 - blah blah
-

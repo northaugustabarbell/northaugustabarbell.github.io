@@ -16,11 +16,16 @@
   <div class="home-right">    
     <div class="services-container"> 
       <p class="services-caption">Services</p>
-      <ul class="services">      
-        <li><a href="/services"><div class="service-card card1"><h3>Individualized Olympic Weightlifting Programs</h3></div></a></li>
-        <li><a href="/services"><div class="service-card card2"><h3>REMOTE COACHING AND PROGRAMMING</h3></div></a></li>
-        <li><a href="/services"><div class="service-card card3"><h3>Video Analysis and Feedback</h3></div></a></li>
-        <li><a href="/services"><div class="service-card card4"><h3>Personal <br> Training</h3></div></a></li>
+      <ul class="services">   
+        {{ range first 4 (where .Site.RegularPages "Section" "services").ByWeight }}   
+          <li>
+            <a href="/services#{{ .File.BaseFileName }}">
+              <div class="service-card {{ .Params.card }}">
+                <h2>{{ .Title | safeHTML }}</h2>
+              </div>
+            </a>
+          </li>
+        {{ end }}
       </ul>
     </div>
   </div>

@@ -31,8 +31,7 @@
 
 .staff-container .staff-list .staff-image {
     height: 375px;
-    width: 250px;
-    border-radius: 10%;
+    width: 250px;    
     float: left;
     margin-left: 10px;
     margin-right: 10px;
@@ -41,8 +40,7 @@
 
 
 .staff-container .staff-list .staff-placeholder {
-    border: 1px solid rgb(255,255,255);
-    border-radius: 10%;
+    border: 1px solid rgb(255,255,255);    
     display: flex;
     flex-shrink: 0;
     align-items: center;
