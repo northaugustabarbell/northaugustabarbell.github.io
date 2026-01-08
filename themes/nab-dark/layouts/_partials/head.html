@@ -14,13 +14,14 @@
 
 {{ $cssPath := printf "css/%s.css" $cssName }}
 
-{{ if (fileExists (printf "static/%s" $cssPath)) }}
+{{ $css := resources.Get $cssPath }}
+
+{{ if $css }}
   {{- if hugo.IsDevelopment }}    
-    <link rel="stylesheet" href="{{ $cssPath | relURL }}">
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $cssPath | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
+    {{ $css = $css | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{- end }}
 {{ end }}
 
