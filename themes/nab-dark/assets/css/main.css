@@ -76,51 +76,38 @@ a {
   grid-column: col-start / span 12;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar {  
+  display: block;
   width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-menu {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  gap: 1rem;
   padding: 0;
-  gap: 2rem;
+  margin: 0.3rem;
 }
 
 .navbar-menu-button a {
   color: var(--text-color);
   background-color: var(--button-color);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   transition: color 0.2s;
-  padding-top: 2.5px;
-  padding-bottom: 2.5px;
-  padding-left: 5px;
-  padding-right: 5px;
   width: 105px;
   text-align: center;
-}
-
-.navbar-menu-join-button a {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  border: 1px solid rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: 500;
-  transition: color 0.2s;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 125px;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-menu li a:hover {
@@ -135,15 +122,17 @@ a {
 .navbar-title-container {
   display: flex;
   flex-direction: column; 
+  align-items: center;
 }
 
 .navbar-title {
-  letter-spacing: 0.05em;
+  font-size: 1.4rem;
+  text-align: center;          
   margin: 0;           
 } 
 
-.subtitle {            
-  letter-spacing: 0.1em;
+.subtitle {    
+  font-size: 0.70rem; /* 11.5pt */        
   margin: 0;  
 }
 
@@ -167,7 +156,7 @@ a {
 
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-top: 1px solid rgb(255, 255, 255);
   margin: 0;
   padding-left: 2px;
@@ -178,7 +167,7 @@ a {
 .footer h3 {
   padding: 0;
   margin: 0;
-  font-size: 13pt;
+  font-size: 1.08rem /* 13pt */;
 }
 
 .footer .address {
@@ -222,10 +211,12 @@ a {
   flex: 1;
 }
 
-/* Large devices (laptops, desktops, etc) */
+/* Tablets, Laptops, and Desktops (768px and up) */
 @media (min-width: 768px) {  
   .navbar {
-    display: flex;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
   }
 
   .navbar-title-container {
@@ -233,7 +224,7 @@ a {
   }
 
   .navbar-title {
-    font-size: 3rem;            
+    font-size: 3rem;         
   } 
 
   .subtitle {
@@ -243,41 +234,8 @@ a {
   .navbar-container {
     padding-right: 50px;
   }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 768px) {
-  .navbar {
-    display: block;
-  }
-
-  .navbar-title-container {
-    align-items: center;
-  }
-
-  .navbar-title {        
-    font-size: 2rem;
-    text-align: center;        
-  } 
-
-  .subtitle {
-    font-size: 11.5pt;      
-  } 
-
-  .navbar-container {
-    padding-top: 5px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .navbar-menu-join-button a {  
-    font-size: 1.3rem;  
-    padding-top: 4px;
-    padding-bottom: 4px;  
-    width: 125px;
-  }
 
   .footer {  
-    flex-direction: column;
+    flex-direction: row;
   }
 }

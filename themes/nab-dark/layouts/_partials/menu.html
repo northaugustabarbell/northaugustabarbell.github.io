@@ -41,12 +41,8 @@ Renders a menu for the given menu ID.
       {{- $attrs = merge $attrs (dict "class" "nav-bar-link ancestor" "aria-current" "true") }}
      {{- else }}
       {{- $attrs = merge $attrs (dict "class" "nav-bar-link inactive-link" "aria-current" "page") }}      
-    {{- end }}
-    {{- if eq $name "Join Now" }} 
-      <li class="navbar-menu-join-button">
-    {{- else }}
+    {{- end }}    
       <li class="navbar-menu-button">
-    {{- end }}
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}
