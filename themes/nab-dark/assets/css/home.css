@@ -1,10 +1,14 @@
 .home-container {
-  /* border: 1px solid rgb(255, 255, 255); */
-  padding: 0px;
-  grid-column: col-start / span 12;
+    flex-direction: column;   
+    /* border: 1px solid rgb(255, 255, 255); */
+    padding: 0px;
+    grid-column: col-start / span 12;
 }
 
 .home-left {
+    width: 100%;
+    height: 400px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +24,7 @@
     margin: 0;
 }
 
-.join-container {
+.description-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,10 +33,10 @@
     height: 100%;  
 }
 
-.join-text {
+.description-text {
     text-align:justify;
     padding: 5px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.3);    
 }
 
@@ -45,7 +49,7 @@
     display: flex;        
     align-items: center;
     align-content: center;
-    width: 40%;
+    width: 100%;
 }  
 
 .services-container {   
@@ -54,6 +58,7 @@
     padding: 0;
     width: 100%;
 }
+
 .services-caption {
     font-family: 'halyard-micro-bold', sans-serif;
     text-transform: uppercase;
@@ -61,11 +66,12 @@
     padding: 0;
     margin: 0;
 }
+
 ul.services {
     list-style-type: none; /* Remove bullets */
     padding: 10px; /* Remove padding */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 10px;    
 }
 
@@ -119,14 +125,17 @@ ul.services li a:hover .service-card {
     padding-left: 10%;    
 }
 
-/* Desktop  */
+/* Tablets, Laptops, and Desktops (768px and up) */
 @media (min-width: 768px) {
     .home-container {
         display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 20px;
     }    
 
-    .home-left {        
+    .home-left {   
+        height: 600px;     
         width: 60%;
     }
 
@@ -134,26 +143,11 @@ ul.services li a:hover .service-card {
         width: 40%;
     }     
     
+    ul.services {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
    .join-text {
         font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column;       
-    }    
-
-    .home-left {
-        width: 100%;
-        height: 400px;
-    }
-
-    .home-right {
-        width: 100%;
-    }
-
-   .join-text {
-        font-size: 1rem;
     }
 }

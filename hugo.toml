@@ -6,7 +6,7 @@ theme = 'nab-dark'
 [params]
 subtitle = 'Home of Olympic Weightlifting in the CSRA'
 address = '1764 Knox Ave. North Augusta, SC'
-hours = '<div class="hours-row"><div class="column-1">Monday-Saturday:</div><div class="column-2">5am – 10pm</div></div><div class="hours-row"><div class="column-1">Sunday:</div><div class="column-2">Closed</div></div>'
+hours = '<div class="day">Monday-Saturday:</div><div class="time">5am – 10pm</div><div class="day">Sunday:</div><div class="time">Closed</div>'
 phone = '704-577-6049'
 email = 'NorthAugustaBarbell@gmail.com'
 copyright = '2025 North Augusta Barbell'

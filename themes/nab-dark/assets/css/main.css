@@ -91,7 +91,7 @@ a {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  list-style: none;
+  list-style: none; 
   gap: 1rem;
   padding: 0;
   margin: 0.3rem;
@@ -174,32 +174,29 @@ a {
   flex: 1;
 }
 
-.footer .hours {
-  flex: 1;
-}
-
 .footer .address p {
   padding: 0;
   margin: 0;
 }
 
+.footer .hours {
+  flex: 1;  
+}
+
 .hours .hours-container {
-  width: 332px;
+  display: grid;
+  /* Column 1: width based on content, right-aligned */
+  /* Column 2: width based on content, left-aligned */
+  grid-template-columns: max-content max-content;
+  gap: 3px 5px; /* Vertical gap, Horizontal gap */
+  align-items: center;
 }
 
-.hours .hours-row {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-
-.hours .hours-container .column-1 {
-  flex: 1;
+.hours .day {
   text-align: right;
 }
 
-.hours .hours-container .column-2 {
-  flex: 1;
+.hours .time {
   text-align: left;
 }
 
