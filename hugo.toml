@@ -9,7 +9,8 @@ address = '1764 Knox Ave. North Augusta, SC'
 hours = '<div class="day">Monday-Saturday:</div><div class="time">5am – 10pm</div><div class="day">Sunday:</div><div class="time">Closed</div>'
 phone = '704-577-6049'
 email = 'NorthAugustaBarbell@gmail.com'
-copyright = '2025 North Augusta Barbell'
+copyright = '2026-2027 North Augusta Barbell'
+instagram = 'northaugustabarbell'
 
 [menus]
   [[menus.main]]
