@@ -142,12 +142,12 @@ a {
   background-color: var(--button-color);
   text-decoration: none;
   color: var(--text-color);
-  font-size: xx-large;
+  font-size: x-large;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 0px;
   padding-left: 0px;  
-  width: 300px; 
+  width: 180px; 
 }
 
 .large-button:hover {
