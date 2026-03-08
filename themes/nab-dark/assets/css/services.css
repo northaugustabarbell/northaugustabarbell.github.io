@@ -28,8 +28,8 @@
     margin: 20px;    
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
     .service-title {
-        font-size: 15pt;
+        font-size: 10pt;
     }
 }

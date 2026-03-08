@@ -1,5 +1,6 @@
 .contact-container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
 
     padding: 0px;
@@ -13,11 +14,11 @@
 }
 
 .contact-container .contact-description {
-    width: 50%;
+    width: 100%;
 }
 
 .contact-container .contact-form-container {
-    width: 50%;
+    width: 100%;
 }
 
 .contact-container .contact-info {
@@ -60,18 +61,4 @@
 
 .contact-form-container .contact-form textarea {
     margin-bottom: 10px;
-}
-
-@media (max-width: 768px) { 
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-container .contact-description {
-        width: 100%;
-    }
-
-    .contact-container .contact-form-container {
-        width: 100%;
-    }
 }
